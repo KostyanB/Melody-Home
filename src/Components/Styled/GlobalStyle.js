@@ -43,6 +43,10 @@ export const GlobalStyle = createGlobalStyle `
 
     :focus, :active {
         outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+        -moz-tap-highlight-color: transparent;
     }
 
     a:focus, a:active {

@@ -42,6 +42,9 @@ const LinkTel = styled(HeadLink)`
     font-weight: 700;
     font-size: 17px;
     line-height: 20px;
+    :hover {
+        color: #3595F6;
+    }
     @media (max-width: 900px) {
         font-size: 14px;
         line-height: 16px;

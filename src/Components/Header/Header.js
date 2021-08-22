@@ -14,20 +14,13 @@ const Head = styled.header`
         padding: 6px 0;
     }
 `;
-// const HeadWrap = styled.div`
-//     max-width: 1280px;
-//     margin: 0 auto;
-//     padding: 0 10px;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-// `;
 const HeadWrap = styled(Wrapper)`
     @media (max-width: 768px) {
         grid-template-rows: repeat(2, 1fr);
         row-gap: 6px
     }
 `;
+
 
 const Header = () => {
 

@@ -21,4 +21,10 @@ export const MainButton = styled.button`
     color: #FFF;
     line-height: 19px;
     text-align: center;
+    box-sizing: border-box;
+    :hover {
+        background-color: #635854;
+        color:  #3596F5;
+        box-sizing: border-box;
+    }
 `;
