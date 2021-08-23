@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { HeadLink } from './HeadLink';
+import { Link } from '../Styled/Link';
 
 const ContactWrap = styled.div`
     grid-column: 11/span 2;
+    justify-self: end;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    min-width: 145px;
     @media (max-width: 768px) {
         grid-column: 5/span 8;
         grid-row: 1;
@@ -25,33 +27,23 @@ const Text = styled.div`
     text-align: center;
     color: #FFFFFF;
     margin-bottom: 4px;
-    @media (max-width: 900px) {
-        font-size: 12px;
-        line-height: 14px;
-    }
+    width: fit-content;
     @media (max-width: 768px) {
-        font-size: 14px;
-        line-height: 16px;
         margin-bottom: 0;
     }
     @media (max-width: 480px) {
         display: none;
     }
 `;
-const LinkTel = styled(HeadLink)`
+const LinkTel = styled(Link)`
     font-weight: 700;
     font-size: 17px;
     line-height: 20px;
+    color: #FFFFFF;
     :hover {
         color: #3595F6;
     }
-    @media (max-width: 900px) {
-        font-size: 14px;
-        line-height: 16px;
-    }
     @media (max-width: 768px) {
-        font-size: 17px;
-        line-height: 20px;
         margin-left: 10px;
     }
 `;

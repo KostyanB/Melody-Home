@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { HeadLink } from './HeadLink';
+import { Link } from '../Styled/Link';
 
 const NavMenu = styled.ul`
     grid-column: 3/span 8;
@@ -18,9 +18,10 @@ const NavMenu = styled.ul`
 const Item = styled.li`
     text-align: center;
 `;
-const Link = styled(HeadLink)`
+const HeadLink = styled(Link)`
     font-size: 16px;
     line-height: 19px;
+    color: #FFFFFF;
     :hover {
         color: #3595F6;
     }
@@ -31,7 +32,7 @@ const Link = styled(HeadLink)`
 `;
 const NavItem = props => (
     <Item>
-        <Link href={props.link}>{props.name1}<br/>{props.name2}</Link>
+        <HeadLink href={props.link}>{props.name1}<br/>{props.name2}</HeadLink>
     </Item>
 )
 

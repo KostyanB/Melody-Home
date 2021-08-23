@@ -119,11 +119,11 @@ export const GlobalStyle = createGlobalStyle `
         overflow-y: auto;
     }
 
-    .show-floor>path {
+    .show-floor>path, .show-apts>path {
         opacity: 0;
         cursor: pointer;
     }
-    .show-floor>path:hover {
+    .show-floor>path:hover, .show-apts>path:hover {
         opacity: 1;
     }
     path.active-path {
@@ -131,6 +131,13 @@ export const GlobalStyle = createGlobalStyle `
     }
     .logo-img:hover {
         fill: #3595F6;
+    }
+    div.is-open {
+        opacity: 1;
+        transform: scale(1);
+    }
+    a.active-link {
+        color: #3596F5;
     }
 
 `;

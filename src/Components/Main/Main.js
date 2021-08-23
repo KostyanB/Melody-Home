@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { Context } from '../Functions/Context'
 import Wrapper from '../Styled/Wrapper';
-import { HomeBlock } from './Left/HomeBlock'
-import { CounterBlock } from './Right/CounterBlock';
+import HomeBlock from './HomeBlock'
+import { CounterBlock } from './CounterBlock';
+import toggleSelectPath from '../Functions/toggleSelectPath';
 
 const MainWrapper = styled(Wrapper)`
     padding-top: 50px;
@@ -17,12 +19,34 @@ const MainWrapper = styled(Wrapper)`
     }
 `;
 
-const Main = () => (
+const Main = () => {
 
-    <MainWrapper>
-        <HomeBlock/>
-        <CounterBlock/>
-    </MainWrapper>
-)
+    const { selectFloor: { selectedFloor, setSelectedFloor },
+        modalOpen: { setOpenModal },
+        coordsHome: { floorCoords, setFloorCoords, handleApts }
+    } = useContext(Context);
+
+    const handleFloorSelect = targetFloor => {
+        setSelectedFloor(targetFloor);
+        setFloorCoords(toggleSelectPath(targetFloor, floorCoords));
+    };
+
+    const showFloorPlan = () => {
+        console.log('click');
+        handleApts(selectedFloor);
+        setOpenModal('is-open');
+    };
+
+    return (
+        <MainWrapper>
+            <HomeBlock showResult={showFloorPlan}
+                handleFloorSelect={handleFloorSelect}
+            />
+            <CounterBlock showResult={showFloorPlan}
+                handleFloorSelect={handleFloorSelect}
+            />
+        </MainWrapper>
+    );
+}
 export default Main;
 

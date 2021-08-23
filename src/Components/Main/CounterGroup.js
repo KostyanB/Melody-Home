@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import arrowBtn from '../../../img/arrow-up.svg';
-import { Context } from '../../Functions/Context'
+import { Context } from '../Functions/Context';
+import arrowBtn from '../../img/arrow-up.svg';
 
 const GroupWrapper = styled.div`
     display: -webkit-box;
@@ -52,21 +52,22 @@ const FloorNum = styled.span`
     }
 `;
 
-const CounterGroup = ({ handle }) => {
+const CounterGroup = ({ handleFloor }) => {
 
     const { selectFloor: { selectedFloor } } = useContext(Context);
 
-    const chekFloor = val => {
-        if (val <= 18 && val >= 2) {
-            (val < 10) ? handle(`0${val}`) : handle(String(val));
-        }
-    }
+    const chekFloor = val => (val >= 2 && val <= 18) &&
+        handleFloor(val.toLocaleString("en-US", { minimumIntegerDigits: 2, useGrouping: false }));
 
     return (
         <GroupWrapper>
-            <ButtonUp onClick={() => chekFloor(+selectedFloor + 1)}><img src={arrowBtn} alt="up"/></ButtonUp>
+            <ButtonUp onClick={() => chekFloor(+selectedFloor + 1)}>
+                <img src={arrowBtn} alt="up"/>
+            </ButtonUp>
             <FloorNum>{selectedFloor}</FloorNum>
-            <ButtonDown onClick={() => chekFloor(+selectedFloor - 1)}><img src={arrowBtn} alt="down"/></ButtonDown>
+            <ButtonDown onClick={() => chekFloor(+selectedFloor - 1)}>
+                <img src={arrowBtn} alt="down"/>
+            </ButtonDown>
         </GroupWrapper>
     );
 }
