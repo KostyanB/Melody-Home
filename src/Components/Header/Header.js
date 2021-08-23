@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Wrapper from '../Styled/Wrapper';
 import { Logo } from './Logo';
 import NavBar from './NavBar';
-import Contacts from './Contacts';
+import Contacts from '../Styled/Contacts';
 
 
 const Head = styled.header`
@@ -20,7 +20,14 @@ const HeadWrap = styled(Wrapper)`
         row-gap: 6px
     }
 `;
-
+const HeadContact = styled.div`
+    grid-column: 11/span 2;
+    justify-self: end;
+    @media (max-width: 768px) {
+        grid-column: 5/span 8;
+        grid-row: 1;
+    }
+`;
 
 const Header = () => {
 
@@ -30,7 +37,10 @@ const Header = () => {
             <HeadWrap>
                 <Logo/>
                 <NavBar/>
-                <Contacts/>
+                <HeadContact>
+                    <Contacts color="#fff" pos="flex-end"/>
+                </HeadContact>
+
             </HeadWrap>
         </Head>
 

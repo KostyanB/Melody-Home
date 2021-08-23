@@ -22,7 +22,7 @@ const AptLink = ({ num, area, rooms, active, handle, show }) => (
                 data-apt={num}
                 onPointerOver={e => handle(e.target.dataset.apt)}
                 onClick={() => show(num)}>
-                    Kв. № {num}, {rooms} комн. {area} кв. м.
+                    Kв. # {num}, {rooms} комн. {area} кв. м.
                 </LinkApt>
         </Item>
 )

@@ -7,6 +7,7 @@ const Wrapper = styled.div`
     padding: 0 10px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    align-items: center;
 `;
 
 export default Wrapper;

@@ -13,9 +13,10 @@ const Plan = styled.div`
     text-align: center;
     flex-direction: column;
     padding: 50px;
-    /* @media (max-width: 768px) {
-        width: 100%;
-    } */
+    @media (max-width: 576px) {
+        width: 100vw;
+        padding: 20px;
+    }
 `;
 
 const PlanTitle = styled(Title)`

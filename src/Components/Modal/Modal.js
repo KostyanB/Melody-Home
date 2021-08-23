@@ -5,6 +5,7 @@ import toggleSelectPath from '../Functions/toggleSelectPath';
 import { Overlay } from '../Styled/Overlay';
 import ModalInfo from './ModalInfo';
 import ModalPlan from './ModalPlan';
+import { CloseButton } from './CloseButton';
 
 const ModalOverlay = styled(Overlay)`
     display: flex;
@@ -22,11 +23,13 @@ const ModalContent = styled.div`
     background-color: #fff;
     display: flex;
     flex-direction: row;
-    @media (max-width: 768px) {
-        width: 95vw;
-        height: fit-content;
+    position: relative;
+    @media (max-width: 576px) {
+        width: 100vw;
+        height: 100vh;
         margin: 2vh auto;
         flex-direction: column;
+        overflow-y: auto;
     }
 `;
 const Modal = () => {
@@ -57,12 +60,12 @@ const Modal = () => {
             onClick={e => closeModal(e)}
             >
             <ModalContent>
+            <CloseButton id="modal-close" onClick={e => closeModal(e)}/>
                 <ModalPlan handleAptSelect={handleAptSelect}
                     showSelectedApt={showSelectedApt}
                 />
                 <ModalInfo handleAptSelect={handleAptSelect}
                     showSelectedApt={showSelectedApt}
-                    close={closeModal}
                 />
             </ModalContent>
         </ModalOverlay>

@@ -138,6 +138,6 @@ export const GlobalStyle = createGlobalStyle `
     }
     a.active-link {
         color: #3596F5;
+        text-decoration: underline;
     }
-
 `;

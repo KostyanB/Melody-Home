@@ -32,7 +32,6 @@ const Main = () => {
     };
 
     const showFloorPlan = () => {
-        console.log('click');
         handleApts(selectedFloor);
         setOpenModal('is-open');
     };

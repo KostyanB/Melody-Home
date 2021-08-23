@@ -4,22 +4,33 @@ import { Context } from '../Functions/Context';
 import { InfoWrapper } from '../Styled/InfoWrapper';
 import { Title } from '../Styled/Title';
 import AptLink from './AptLink';
-import closeImg from '../../img/close.svg';
 
 const ModalInfoWrapper = styled(InfoWrapper)`
     width: 40%;
     padding: 50px 46px;
     align-items: flex-start;
-    position: relative;
+    @media (max-width: 576px) {
+        width: 100vw;
+        padding: 20px;
+        align-items: center;
+    }
 `;
 const InfoTitle = styled(Title)`
     font-size: 24px;
     line-height: 29px;
     color: #000;
+    @media (max-width: 576px) {
+        margin-bottom: 10px;
+    }
 `;
 const AptList = styled.ul`
-    /* margin-top: 55px; */
-    /* margin-bottom: 55px; */
+    @media (max-width: 576px) {
+        display: grid;
+        justify-content: space-evenly;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: clamp(10px, 5vw, 30px);
+        margin-bottom: 20px;
+    }
 `;
 const InfoSub = styled.p`
     font-family: Roboto;
@@ -29,26 +40,19 @@ const InfoSub = styled.p`
     line-height: 19px;
     color: #635854;
     max-width: 250px;
-`;
-const CloseBtn = styled.button`
-    background-image: url(${closeImg});
-    background-size: cover;
-    background-color: transparent;
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    top: 38px;
-    right: 27px;
+    @media (max-width: 576px) {
+        text-align: center;
+        max-width: 100vw;
+    }
 `;
 
-const ModalInfo = ({ handleAptSelect, showSelectedApt, close }) => {
+const ModalInfo = ({ handleAptSelect, showSelectedApt }) => {
 
     const { coordsHome: { aptsCoords }
     } = useContext(Context);
 
     return (
         <ModalInfoWrapper>
-            <CloseBtn id="modal-close" onClick={e => close(e)}/>
             <InfoTitle>Выберите квартиру</InfoTitle>
             <AptList>
                 {aptsCoords?.apts.map(item =>
