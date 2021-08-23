@@ -35,7 +35,7 @@ const Modal = () => {
         selectApt: { setSelectedApt },
         coordsHome: { aptsCoords, handleShowApt }
     } = useContext(Context);
-    console.log('openModal: ', openModal);
+
     const closeModal = e =>
         (e.target.id === 'modal-close' || e.target.id === 'modal-overlay') &&
             setOpenModal('');
