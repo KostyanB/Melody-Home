@@ -6,9 +6,12 @@ import HomeBlock from './HomeBlock'
 import { CounterBlock } from './CounterBlock';
 import toggleSelectPath from '../Functions/toggleSelectPath';
 
+const MainBlock = styled.div`
+`;
 const MainWrapper = styled(Wrapper)`
     padding-top: 50px;
     padding-bottom: 100px;
+    flex-grow: 1;
     @media (max-width: 768px) {
         padding-top: 37px;
         padding-bottom: 75px;
@@ -37,14 +40,16 @@ const Main = () => {
     };
 
     return (
-        <MainWrapper>
-            <HomeBlock showResult={showFloorPlan}
-                handleFloorSelect={handleFloorSelect}
-            />
-            <CounterBlock showResult={showFloorPlan}
-                handleFloorSelect={handleFloorSelect}
-            />
-        </MainWrapper>
+        <MainBlock>
+            <MainWrapper>
+                <HomeBlock showResult={showFloorPlan}
+                    handleFloorSelect={handleFloorSelect}
+                />
+                <CounterBlock showResult={showFloorPlan}
+                    handleFloorSelect={handleFloorSelect}
+                />
+            </MainWrapper>
+        </MainBlock>
     );
 }
 export default Main;

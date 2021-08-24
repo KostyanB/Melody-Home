@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from '../Styled/Link';
+import { Item, Link } from '../Styled/Link';
 
 const NavMenu = styled.ul`
     grid-column: 3/span 8;
@@ -15,9 +15,7 @@ const NavMenu = styled.ul`
         padding: 0;
     }
 `;
-const Item = styled.li`
-    text-align: center;
-`;
+
 const HeadLink = styled(Link)`
     font-size: 16px;
     line-height: 19px;

@@ -29,7 +29,9 @@ export const GlobalStyle = createGlobalStyle `
     :root {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
+
     }
+
     * {
         padding: 0;
         margin: 0;
@@ -71,6 +73,13 @@ export const GlobalStyle = createGlobalStyle `
         -ms-text-size-adjust: 100%;
         -moz-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
+
+    }
+    #root {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     input, button, textarea, optgroup, select {

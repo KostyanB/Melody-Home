@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from '../Styled/Link';
+import { Link } from './Link';
 
 const ContactWrap = styled.div`
     display: flex;
@@ -38,7 +38,6 @@ const LinkTel = styled(Link)`
     font-weight: 700;
     font-size: 17px;
     line-height: 20px;
-    /* color: inherit; */
     :hover {
         color: #3595F6 !important;
     }
