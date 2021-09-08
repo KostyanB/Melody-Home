@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Context } from '../Functions/Context';
 import { Title } from '../Styled/Title';
 import { ImgWrapper } from '../Styled/ImgWrapper';
-import imgPlan from '../../img/floor1.png';
+import imgPlan from '../../img/floor.png';
 import DrawSvg from '../SvgDraw/DrawSvg';
 
 const Plan = styled.div`

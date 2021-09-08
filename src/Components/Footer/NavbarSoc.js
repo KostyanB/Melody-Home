@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from '../Styled/Link';
-import facebookImg from '../../img/facebook.svg'
-import instagramImg from '../../img/instagram.svg'
-import twitterImg from '../../img/twitter.svg'
-import youtubeImg from '../../img/youtube.svg'
+import { Icons } from '../SvgElems';
 
 const NavMenu = styled.ul`
     width: 125px;
@@ -19,29 +16,31 @@ const NavMenu = styled.ul`
 const SocLink = styled(Link)`
     width: 20px;
     height: 20px;
+    display: flex;
+    align-items: center;
     background-position-y: center;
     background-repeat: no-repeat;
     background-size: contain;
 `;
-const FacebookLink = styled(SocLink)`
-    background-image: url(${facebookImg});
-`;
-const InstagramLink = styled(SocLink)`
-    background-image: url(${instagramImg});
-`;
-const TwitterLink = styled(SocLink)`
-    background-image: url(${twitterImg});
-`;
-const YoutubeLink = styled(SocLink)`
-    background-image: url(${youtubeImg});
+const SocSvg = styled(Icons)`
+    width: 100%;
+    height: 100%;
+    :hover {
+        fill: #3595F6;
+    }
 `;
 
-const NavBarSoc = () => (
+const NavBarSoc = () => {
+    const names = ["facebook", "instagram", "twitter", "youtube"];
+    return (
         <NavMenu>
-            <FacebookLink href="#"/>
-            <InstagramLink href="#"/>
-            <TwitterLink href="#"/>
-            <YoutubeLink href="#"/>
+            {names.map(item =>
+                <SocLink href="#" key={item}>
+                    <SocSvg name={item} fill="#635854"/>
+                </SocLink>
+            )}
         </NavMenu>
-)
+    )
+}
+
 export default NavBarSoc;

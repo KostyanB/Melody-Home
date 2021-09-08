@@ -4,6 +4,8 @@ import { Context } from '../Functions/Context';
 import homeImg from '../../img/home.png';
 import { ImgWrapper } from '../Styled/ImgWrapper';
 import DrawSvg from '../SvgDraw/DrawSvg';
+// import { Floors } from '../SvgElems';
+// import RepeatElem from '../SvgElems/RepeatElem';
 
 const HomeBlockWrap = styled.div`
     grid-column: 1/span 7;
@@ -23,6 +25,15 @@ const HomeBlock = ({ showResult, handleFloorSelect }) => {
     return (
         <HomeBlockWrap>
             <ImageWrapper>
+                {/* <RepeatElem count={18}>
+                    {(index) => (
+                        <Floors key={`floor-${index}`}
+                            className="show-floor"
+                            name={index.toLocaleString("en-US", { minimumIntegerDigits: 2, useGrouping: false }))}
+                        />
+                    )}
+                </RepeatFloor> */}
+
                 <DrawSvg viewBox="0 0 734 640"
                     className="show-floor"
                     elemCoords={floorCoords}

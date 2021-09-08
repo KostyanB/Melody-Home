@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Contacts from '../Styled/Contacts';
-import logo from '../../img/logo-stroy.svg';
+import logo from '../../img/logo-stroy.png';
 import NavBarRight from './NavbarRight';
 import NavBarSoc from './NavbarSoc';
 

@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Wrapper from '../Styled/Wrapper';
-import { Logo } from './Logo';
+import Logo from './Logo';
 import NavBar from './NavBar';
 import Contacts from '../Styled/Contacts';
-
 
 const Head = styled.header`
     background-color: #635854;
@@ -29,10 +28,7 @@ const HeadContact = styled.div`
     }
 `;
 
-const Header = () => {
-
-    return (
-        <>
+const Header = () => (
         <Head>
             <HeadWrap>
                 <Logo/>
@@ -40,11 +36,7 @@ const Header = () => {
                 <HeadContact>
                     <Contacts color="#fff" pos="flex-end"/>
                 </HeadContact>
-
             </HeadWrap>
         </Head>
-
-        </>
-    );
-}
+);
 export default Header;

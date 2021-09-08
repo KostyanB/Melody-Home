@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Context } from '../Functions/Context';
-import arrowBtn from '../../img/arrow-up.svg';
+import { Icons } from '../SvgElems';
 
 const GroupWrapper = styled.div`
     display: -webkit-box;
@@ -51,7 +51,6 @@ const FloorNum = styled.span`
         font-size: 70px;
     }
 `;
-
 const CounterGroup = ({ handleFloor }) => {
 
     const { selectFloor: { selectedFloor } } = useContext(Context);
@@ -62,11 +61,11 @@ const CounterGroup = ({ handleFloor }) => {
     return (
         <GroupWrapper>
             <ButtonUp onClick={() => chekFloor(+selectedFloor + 1)}>
-                <img src={arrowBtn} alt="up"/>
+                <Icons name="arrow-up" width={32} height={19}/>
             </ButtonUp>
             <FloorNum>{selectedFloor}</FloorNum>
             <ButtonDown onClick={() => chekFloor(+selectedFloor - 1)}>
-                <img src={arrowBtn} alt="down"/>
+                <Icons name="arrow-up" width={32} height={19}/>
             </ButtonDown>
         </GroupWrapper>
     );
