@@ -17,7 +17,7 @@ Pet-проект. Выполнен по дизайн-макету реально
 
 ## Стек технологий
 
-* ReactHooks, StyledComponents, ContentProvider.
+* ReactHooks, StyledComponents, ContextProvider.
 * Адаптивная кроссбраузерная верстка Grid/Flex.
 * Динамическое построение SVG для интерактива с пользователем. Для этого координаты svg-примитивов выгружены в JSON файл `public/db/homeCoords.json`, куда добавлены свойства для управления ими средствами JS.
 * Сборка с помощью [Create React App](https://github.com/facebook/create-react-app).
