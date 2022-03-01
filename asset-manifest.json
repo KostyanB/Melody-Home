@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/KostyanB/Melody-Home/static/js/main.c5127c5d.chunk.js",
-    "main.js.map": "/KostyanB/Melody-Home/static/js/main.c5127c5d.chunk.js.map",
+    "main.js": "/KostyanB/Melody-Home/static/js/main.a4199369.chunk.js",
+    "main.js.map": "/KostyanB/Melody-Home/static/js/main.a4199369.chunk.js.map",
     "runtime-main.js": "/KostyanB/Melody-Home/static/js/runtime-main.f16acef0.js",
     "runtime-main.js.map": "/KostyanB/Melody-Home/static/js/runtime-main.f16acef0.js.map",
-    "static/js/2.ab528b20.chunk.js": "/KostyanB/Melody-Home/static/js/2.ab528b20.chunk.js",
-    "static/js/2.ab528b20.chunk.js.map": "/KostyanB/Melody-Home/static/js/2.ab528b20.chunk.js.map",
+    "static/js/2.66273d07.chunk.js": "/KostyanB/Melody-Home/static/js/2.66273d07.chunk.js",
+    "static/js/2.66273d07.chunk.js.map": "/KostyanB/Melody-Home/static/js/2.66273d07.chunk.js.map",
     "index.html": "/KostyanB/Melody-Home/index.html",
-    "static/js/2.ab528b20.chunk.js.LICENSE.txt": "/KostyanB/Melody-Home/static/js/2.ab528b20.chunk.js.LICENSE.txt",
+    "static/js/2.66273d07.chunk.js.LICENSE.txt": "/KostyanB/Melody-Home/static/js/2.66273d07.chunk.js.LICENSE.txt",
     "static/media/floor.03547ca6.png": "/KostyanB/Melody-Home/static/media/floor.03547ca6.png",
     "static/media/floors.8446a293.svg": "/KostyanB/Melody-Home/static/media/floors.8446a293.svg",
     "static/media/home.7fdb2dd8.png": "/KostyanB/Melody-Home/static/media/home.7fdb2dd8.png",
@@ -15,7 +15,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f16acef0.js",
-    "static/js/2.ab528b20.chunk.js",
-    "static/js/main.c5127c5d.chunk.js"
+    "static/js/2.66273d07.chunk.js",
+    "static/js/main.a4199369.chunk.js"
   ]
 }
